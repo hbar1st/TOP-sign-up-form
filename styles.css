@@ -3,3 +3,83 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+#brand:after {
+    background-image: url()
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#brand {
+    
+    width: 44vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-image: url(background-branding.jpeg);
+    background-position-x: 25%;
+    background-position-y: 30%;
+    
+}
+
+#content {
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 2rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        width: clamp(50%, 500px, 100%);
+        gap: 3rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            font-size: larger;
+            gap: 0px;
+
+            label {
+                margin-bottom: -3px;
+            }
+            input {
+                font-size: 1.1;
+                padding: 3px;
+                border-radius: 4px;
+            }
+        }
+    }
+    button {
+        flex: 0;
+        width: fit-content;
+        padding: .5rem;
+        border-radius: 7px;
+        margin-top: 1rem;
+    }
+}
+
+.dokdo-regular {
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
