@@ -41,7 +41,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-
+    color: darkgreen;
     letter-spacing: .3px;
     line-height: 1.8rem;
     background: linear-gradient(#fdfee9 0%, #fffef4 100vh);
@@ -53,7 +53,7 @@ body {
     h1,
     h2 {
         max-width: 75ch;
-        color: #392f24;
+        color: darkgreen;
     }
 
     h2 {
@@ -65,7 +65,7 @@ body {
     }
 
     p {
-        color: #392f24;
+        color: darkgreen;
     }
 
 }
@@ -77,6 +77,7 @@ body {
 form {
 
     max-width: 75ch;
+    color: darkgreen;
 
     .row {
         display: flex;
@@ -97,7 +98,7 @@ form {
             }
 
             input {
-                font-size: 1.1;
+                font-size: 1.1rem;
                 padding: 3px;
                 border-radius: 4px;
                 width: 12rem;
@@ -155,16 +156,16 @@ form {
     }
 }
 
-.row .field input:focus {
-    border: 1px solid blue;
+.row .field input:focus, input:active {
+    border: 1px solid rgb(108, 221, 16);
 }
 
 
 .field input:invalid {
-    border: 1px solid red;
+    border: 1px solid: #e61a1a;
 }
 
-button:hover:not(.off) {
+button:hover:not(.off), button:focus {
     outline: 2px solid darkgreen;
     color: white;
     text-shadow: none;
