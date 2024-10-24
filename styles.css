@@ -13,14 +13,17 @@ body {
 #logo {
 
     z-index: 2;
-    width: 100%;
+    width: 40vw;
+    position: absolute;
+    top: calc(30vh + 2rem);
+
 }
 
 #brand {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 44vw;
+    width: 40vw;
     max-height: 100vh;
     overflow: hidden;
     background-image: url(background-branding.jpeg);
@@ -33,20 +36,24 @@ body {
     font-family: "Dokdo", system-ui;
     font-weight: 400;
     font-style: normal;
-    width: 75vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     gap: 2rem;
 
     letter-spacing: .3px;
     line-height: 1.8rem;
-    background: linear-gradient(#FEFAE0 0%, #FEFAE0 100vh);
+    background: linear-gradient(#fdfee9 0%, #fffef4 100vh);
 
+    #top {
+        min-height: 30vh;
+        padding-top: 10vh;
+    }
     h1,
     h2 {
         max-width: 75ch;
+        color: #392f24;
     }
 
     h2 {
@@ -55,6 +62,10 @@ body {
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-variant-ligatures: no-common-ligatures;
         letter-spacing: 1px;
+    }
+
+    p {
+        color: #392f24;
     }
 
 }
@@ -72,6 +83,7 @@ form {
         justify-content: flex-start;
         width: clamp(50%, 500px, 100%);
         gap: 3rem;
+        margin-bottom: .5rem;
 
         div {
             display: flex;
@@ -102,8 +114,11 @@ form {
                 text-rendering: geometricPrecision;
                 text-underline-offset: 3px;
                 text-decoration-thickness: 5%;
-                font-size: 1rem;
+                font-size: .9rem;
                 opacity: 0;
+                margin-left: 5%;
+                margin-top: -2px;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -114,41 +129,46 @@ form {
         padding: .5rem 1rem;
         border-radius: 7px;
         margin-top: 1rem;
-        background-color: #b5d7b7;
-        color: #456146;
+        background-color: #bce060;
+        color: #392f24;
         font-weight: 600;
         letter-spacing: .3px;
         border-style: hidden;
-        outline-color: darkgreen;
-        text-shadow: #c7d7c8 1px 1px 1px;
+        outline-color: rgb(73, 83, 73);
+        text-shadow: #9ecb3e 1px 1px 1px;
         margin-left: 2rem;
-        box-shadow: 1px 1px 1px 1px darkgreen;
+        box-shadow: 2px 2px 1px 1px #8e8f7b;
 
     }
 }
 
+
 #content div#inputs {
     padding-top: 1rem;
-    background-color: rgb(251, 252, 250);
+    background-color: 	#f7f8f7;
     padding-left: 2rem;
     border-bottom: 1px solid gray;
     width: calc(75vw - 2rem);
+
+    em {
+        font-size: 1.5rem;
+    }
 }
 
 .row .field input:focus {
-    border-color: blue;
+    border: 1px solid blue;
 }
 
 
 .field input:invalid {
-    border-color: purple;
+    border: 1px solid red;
 }
 
 button:hover:not(.off) {
     outline: 2px solid darkgreen;
-    background: linear-gradient(#b5d7b7 0%, darkgreen 100%);
     color: white;
     text-shadow: none;
+    background: linear-gradient(#b5d7b7 0%, #65892a 100%);
 }
 
 button.off {
@@ -170,6 +190,8 @@ button.off {
         text-decoration: none;
         background-color: #f2ffcc;
         text-shadow: rgb(218, 166, 32) 1px 1px 1px;
+        border: 1px solid #ebfabf;
+        padding: 2px;
     }
 }
 
