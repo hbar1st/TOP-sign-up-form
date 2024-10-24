@@ -1,3 +1,7 @@
+:root {
+    --invalid: #e61a1a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -50,6 +54,7 @@ body {
         min-height: 30vh;
         padding-top: 10vh;
     }
+
     h1,
     h2 {
         max-width: 75ch;
@@ -59,7 +64,7 @@ body {
     h2 {
         font-size: 1.1rem;
         font-weight: 500;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-variant-ligatures: no-common-ligatures;
         letter-spacing: 1px;
     }
@@ -98,19 +103,21 @@ form {
             }
 
             input {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 padding: 3px;
                 border-radius: 4px;
                 width: 12rem;
                 letter-spacing: .3px;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-weight: 600;
+                font-weight: 500;
                 font-variant-numeric: slashed-zero;
                 border-color: #e5ebe8;
+                outline: none;
+                border-style: solid;
             }
 
             #error {
-                color: #e61a1a;
+                color: var(--invalid);
                 text-decoration: underline;
                 text-rendering: geometricPrecision;
                 text-underline-offset: 3px;
@@ -146,7 +153,7 @@ form {
 
 #content div#inputs {
     padding-top: 1rem;
-    background-color: 	#f7f8f7;
+    background-color: #f7f8f7;
     padding-left: 2rem;
     border-bottom: 1px solid gray;
     width: calc(75vw - 2rem);
@@ -156,16 +163,22 @@ form {
     }
 }
 
-.row .field input:focus, input:active {
-    border: 1px solid rgb(108, 221, 16);
+.row .field input:focus,
+input:active {
+    outline: none;
+    border: 2px solid rgb(85, 154, 28);
+    box-shadow: 1px 1px rgb(58, 119, 9);
 }
 
 
-.field input:invalid {
-    border: 1px solid: #e61a1a;
+.row .field input[type="password"]:invalid,
+form .row div .invalid {
+    border: 2px solid var(--invalid, red);
 }
 
-button:hover:not(.off), button:focus {
+
+button:hover:not(.off),
+button:focus {
     outline: 2px solid darkgreen;
     color: white;
     text-shadow: none;
