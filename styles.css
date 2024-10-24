@@ -39,27 +39,39 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    padding: 0 2rem;
+
     letter-spacing: .3px;
     line-height: 1.8rem;
     background: linear-gradient(#FEFAE0 0%, #FEFAE0 100vh);
+
+    h1,
     h2 {
-        font-size: 1.2rem;
-        font-weight: 500;
-        font-variant-ligatures: no-common-ligatures;
+        max-width: 75ch;
     }
+
+    h2 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-variant-ligatures: no-common-ligatures;
+        letter-spacing: 1px;
+    }
+
+}
+
+#content>*:not(form) {
+    padding: 0 2rem;
 }
 
 form {
 
     max-width: 75ch;
-    
+
     .row {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: clamp(50%, 500px, 100%);
         gap: 3rem;
-        
 
         div {
             display: flex;
@@ -78,7 +90,7 @@ form {
                 border-radius: 4px;
                 width: 12rem;
                 letter-spacing: .3px;
-                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 font-weight: 600;
                 font-variant-numeric: slashed-zero;
                 border-color: #e5ebe8;
@@ -86,7 +98,7 @@ form {
 
             #error {
                 color: #e61a1a;
-                text-decoration:underline;
+                text-decoration: underline;
                 text-rendering: geometricPrecision;
                 text-underline-offset: 3px;
                 text-decoration-thickness: 5%;
@@ -102,23 +114,34 @@ form {
         padding: .5rem 1rem;
         border-radius: 7px;
         margin-top: 1rem;
-        background-color: 	#b5d7b7;
+        background-color: #b5d7b7;
         color: #456146;
         font-weight: 600;
         letter-spacing: .3px;
         border-style: hidden;
         outline-color: darkgreen;
-        text-shadow:  #c7d7c8 1px 1px 1px;
-
+        text-shadow: #c7d7c8 1px 1px 1px;
+        margin-left: 2rem;
         box-shadow: 1px 1px 1px 1px darkgreen;
+
     }
 }
 
-input:focus {
-    border-color:#c7d7c8;
+#content div#inputs {
+    padding-top: 1rem;
+    background-color: rgb(251, 252, 250);
+    padding-left: 2rem;
+    border-bottom: 1px solid gray;
+    width: calc(75vw - 2rem);
 }
-input:invalid {
-    border-color: red;
+
+.row .field input:focus {
+    border-color: blue;
+}
+
+
+.field input:invalid {
+    border-color: purple;
 }
 
 button:hover:not(.off) {
@@ -132,6 +155,7 @@ button.off {
     color: #a9cdab;
     background-color: #99ac99;
 }
+
 .dokdo-regular {
     font-family: "Dokdo", system-ui;
     font-weight: 400;
@@ -150,7 +174,7 @@ button.off {
 }
 
 #final a:hover {
-    background-color:#f6dfa6;
+    background-color: #f6dfa6;
     font-size: larger;
     color: rgb(1, 228, 1);
     text-shadow: none;
