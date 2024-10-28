@@ -67,6 +67,7 @@ body {
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-variant-ligatures: no-common-ligatures;
         letter-spacing: 1px;
+        margin-top: 1rem;
     }
 
     p {
@@ -129,6 +130,11 @@ form {
                 margin-bottom: 1rem;
             }
         }
+   
+    }
+
+    #inputs > div:nth-child(3) {
+        margin-top: 1rem;
     }
 
     button {
